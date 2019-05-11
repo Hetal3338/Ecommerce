@@ -18,7 +18,7 @@ import com.ecomm.model.UserDetail;
 	
 	
 	@RequestMapping(value="/addUser",method=RequestMethod.POST)
-	public String addUser(@RequestParam("username")String username,@RequestParam("address")String address,@RequestParam("emailId")String emailId,@RequestParam("moblieNo")String moblieNo,@RequestParam("password")String password,@RequestParam("role")String role,@RequestParam("enabled")boolean enabled,Model m)
+	public String addUser(@RequestParam("username")String username,@RequestParam("address")String address,@RequestParam("emailId")String emailId,@RequestParam("moblieNo")String moblieNo,@RequestParam("password")String password,Model m)
 	{
 		UserDetail userDetail=new UserDetail();
 		userDetail.setUsername(username);
@@ -26,8 +26,8 @@ import com.ecomm.model.UserDetail;
 		userDetail.setEmailId(emailId);
 		userDetail.setMoblieNo(moblieNo);
 		userDetail.setPassword(password);
-		userDetail.setRole(role);
-		userDetail.setEnabled(enabled);
+		userDetail.setRole("ROLE_USER");
+		userDetail.setEnabled(true);
 		userDAO.registerUser(userDetail);
 		return "Login";
 	}
