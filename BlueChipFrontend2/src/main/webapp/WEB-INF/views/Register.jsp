@@ -28,14 +28,7 @@
 		<td>Password</td>
 		<td><input type="password" name="password"/></td>
 	</tr>
-	<tr>
-		<td>Role</td>
-		<td><input type="text" name="role" id="role"/></td>
-	</tr>
-	<tr>
-		<td>Enabled</td>
-		<td><input type="text" name="enabled" id="enabled"/></td>
-	</tr>
+	
 	<td colspan="2">
 		<center>
 		<input type="submit" value="add User" class="btn btn-success"/>
